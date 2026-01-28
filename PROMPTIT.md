@@ -184,3 +184,72 @@ Create the file from my messages to you and you to me. The chat we had
 ## Assistant Response
 
 [This file - the complete chat log]
+
+---
+
+## User Request
+
+Create .gitignore file so that bin and obj folders don't go to git
+
+---
+
+## Assistant Response
+
+Done. Created .gitignore that excludes `bin/` and `obj/` folders.
+
+```
+# Build results
+bin/
+obj/
+```
+
+---
+
+## User Request
+
+Create a initial git commit for the project. Add comment on functionality of it
+
+---
+
+## Assistant Response
+
+Done. Created initial commit `69c1147` with a detailed message:
+
+```
+Initial commit: Hotel Management API
+
+ASP.NET Core Web API for hotel room reservations with the following functionality:
+
+Endpoints:
+- POST /api/reservations - Create reservation with date validation
+- DELETE /api/reservations/{id} - Cancel reservation
+- GET /api/rooms/{roomNumber}/reservations - View room's reservations
+- GET /api/rooms - List all rooms (filter by floor/type)
+- GET /api/rooms/available - Search available rooms for date range
+- GET /api/reservations/{id} - Get reservation by GUID
+- GET /api/reservations/confirmation/{number} - Lookup by confirmation number
+- PATCH /api/reservations/{id}/checkin - Check in guest
+- PATCH /api/reservations/{id}/checkout - Check out guest
+
+Business Rules:
+- No overlapping reservations on same room
+- Reservations cannot be in the past
+- Check-out date must be after check-in date
+
+Data:
+- 180 rooms (9 floors x 20 rooms)
+- Room types: Standard ($99) and Suite ($199)
+- In-memory database with Entity Framework Core
+```
+
+---
+
+## User Request
+
+Write the latest messages and responses to end of PROMPTIT.md file
+
+---
+
+## Assistant Response
+
+Done. Appended the latest chat messages to PROMPTIT.md.
